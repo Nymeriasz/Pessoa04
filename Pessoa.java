@@ -1,12 +1,14 @@
 package Pessoa04;
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected String cpf;
 
-
-    public void mostrarDados(){
-        System.out.println(nome+", "+cpf);
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
     }
+
+    public abstract void mostrarDados();
 
     public String getNome() {
         return nome;

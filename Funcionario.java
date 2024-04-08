@@ -4,10 +4,15 @@ public class Funcionario extends Pessoa{
     private String matricula;
     private double salario;
 
+    public Funcionario(String nome, String cpf, String matricula, double salario) {
+        super(nome, cpf);
+        this.matricula = matricula;
+        this.salario = salario;
+    }
+
     @Override
-    public void mostrarDados(){
-        super.mostrarDados();
-        System.out.println(matricula+", "+salario);
+    public void mostrarDados() {
+        System.out.println("Funcionário: " + nome + ", CPF: " + cpf + ", Matrícula: " + matricula + ", Salário: " + salario);
     }
 
     public String getMatricula() {

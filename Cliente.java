@@ -3,10 +3,14 @@ package Pessoa04;
 public class Cliente extends Pessoa{
     private int codigo;
 
+    public Cliente(String nome, String cpf, int codigo) {
+        super(nome, cpf);
+        this.codigo = codigo;
+    }
+
     @Override
-    public void mostrarDados(){
-        super.mostrarDados();
-        System.out.println(codigo);
+    public void mostrarDados() {
+        System.out.println("Cliente: " + nome + ", CPF: " + cpf + ", Código: " + codigo);
     }
 
     public int getCodigo() {
